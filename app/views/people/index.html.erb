@@ -1,0 +1,19 @@
+<div ng-app="app">
+  <div ng-controller="peopleCtrl">
+    <h1>My People</h1>
+    <ul>
+      <li ng-repeat="person in people track by $index" ng-click="showBio(person)">
+        <p>Name: {{person.name}}</p>
+      </li>
+      <p ng-if="person.bioVisible"> Bio: {{person.bio}} </p>
+      
+    </ul>
+    <div>
+      Add person: 
+      <p>Name: <input ng-model="newName"></p>
+      <p>bio: <input ng-model="newBio"></p>
+      <button ng-click="addperson(newName, newBio)">Add person</button>
+    </div> <br>
+    There are: {{countPeople}} people
+  </div>
+</div>
