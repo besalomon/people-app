@@ -2,11 +2,10 @@
   <div ng-controller="peopleCtrl">
     <h1>My People</h1>
     <ul>
-      <li ng-repeat="person in people track by $index" ng-click="showBio(person)">
+      <div ng-repeat="person in people track by $index" ng-click="showBio(person)">
         <p>Name: {{person.name}}</p>
-      </li>
       <p ng-if="person.bioVisible"> Bio: {{person.bio}} </p>
-      
+      </div>
     </ul>
     <div>
       Add person: 
